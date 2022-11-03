@@ -1,0 +1,39 @@
+<div *ngIf="datastatus">
+    <h3 class="myheader">{{response?.Title}}</h3>
+    <div class="myresponse row">
+        <div class="col-8 text-left">
+            <p class="genre">{{response?.Genre}}</p>
+            <p><strong>Country:</strong> {{response?.Language}}</p>
+            <p><strong>Actors:</strong> {{response?.Actors}}</p>
+            <p class="text-muted"> {{response?.Plot}}</p>
+        </div>
+        <div class="col-4 text-right">
+            <img src="{{response?.Poster}}" width="200px">
+        </div>
+        
+    </div>
+
+    <div class='mycharts'>
+        <div class="col-12">
+            <button class= "btn btn-primary mybutton" (click)="onclickbutton('pie')">Pie</button>
+            <button class= "btn btn-primary mybutton" (click)="onclickbutton('bar')">bar</button>
+        </div>
+        <br>
+        <div class="col-12 ">
+            <div class='chart' *ngIf="sharp=='pie'">
+                <div class=" row" *ngFor="let ratings of ratingnum; let i = index">
+                    
+                        <app-chart [ratinginp]="ratings" [ratingsrc]="ratingsource[i]"></app-chart>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div *ngIf="sharp=='bar'">
+                <app-chart2 [ratinginp2]="ratingnum" [ratingsrc2]="ratingsource"></app-chart2>
+            </div>
+        </div>
+    </div>
+</div>
+

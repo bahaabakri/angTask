@@ -1,0 +1,36 @@
+<div class="mytitle text-center">
+  <h2>MSASA</h2>
+  <p>Nice platform to search about movies, series and episodes</p>
+</div>
+<div class="row mynav">
+  <div class="">
+    <input   class="inp" type="search" placeholder="Type here" #mysearchinput>
+  </div>
+  <div class="">
+    <label for="type">Type</label>
+    <select  class="inp" id="type" #mysearchtype>
+      <option value="" selected>---</option>
+      <option value="movie">Movie</option>
+      <option value="series">Series</option>
+      <option value="episode">Episode</option>
+    </select>
+  </div>
+  
+  <div class="">
+    // Start Pug code
+
+    label(for="year") Year
+    -var n = 1950;
+    select(id="year", class="inp", #mysearchyear)
+      option(value="", selected) ---
+      while (n <= 2020)
+        option= n++
+
+    // Eng Pug code
+  </div>
+  <div class="">
+    <button class="btn btn-primary inp" (click)="onclicksearchbutton()" >Search</button>
+  </div>
+</div>
+
+<app-show  [datainp]="response" [datastatus1]="status"></app-show>

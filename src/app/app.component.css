@@ -1,0 +1,14 @@
+
+.mynav {
+    background-color:#555b6e;
+    display: flex;
+    justify-content: space-around;
+    color:#FFF;
+    padding: 5px;
+}
+.inp{
+    padding:5px 10px;
+    margin:10px;
+    border:1px solid #555b6e;
+    border-radius: 5px;
+}

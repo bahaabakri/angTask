@@ -1,0 +1,24 @@
+.chart {
+    display: flex !important;
+    justify-content: center;
+
+}
+.myresponse {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.myheader {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+}
+.genre {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.mybutton {
+    border-radius: 0;
+}

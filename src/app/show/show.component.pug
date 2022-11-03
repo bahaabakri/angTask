@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-5 mytable">
+        <table class="table table-striped " *ngIf= "datastatus1"> 
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Type</th>
+                <th>Options</th>
+            </tr>
+            <tr *ngFor="let ser of datainp?.Search">
+                <td>{{ser.Title}}</td>
+                <td>{{ser.Year}}</td>
+                <td>{{ser.Type}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="onclickdetails(ser.imdbID)" >Details</button>
+                </td>
+            </tr>
+            
+
+
+        </table>
+    </div>
+    <div class="col-7 mydetails" *ngIf="show">
+        <app-show-details [dataindbiddetails] = "dataimdbid" [datastatus]="datastatus2"> </app-show-details>
+    </div>
+    
